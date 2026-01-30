@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3 - HTML Structure</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Part 3: Embedded style overrides one rule from the external sheet -->
+    <style>
+        h2 {
+            text-align: center;
+        }
+        body {
+            background-color: #f8f8f6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="page-title">Module 3 - Learning CSS</h1>
+    </header>
+
+    <main>
+        <!-- Part 3: Inline style on one element (use sparingly) -->
+        <h2 style="color: #2c5282;">Understanding How to Style the Web</h2>
+        <p class="intro">
+            This week, I learned that Cascading Style Sheets (CSS) are used to separate the style from the structure of
+            a web page. This is very important because it allows us to control the typography and layout without making
+            the HTML code messy. I was surprised to learn that by using an external style sheet, we can change the
+            design of multiple pages just by editing a single text file. This makes maintaining a website much easier
+            than before.
+        </p>
+        <p>
+            I also found the topic of colors very interesting. I learned that computer monitors display color using a
+            combination of red, green, and blue light, which we call RGB. To use specific colors in our code, we use
+            Hexadecimal values that start with a hashtag, like #FFFFFF for white or #000000 for black. The professor
+            emphasized that we must always check for sufficient contrast between the text and background so that our
+            content is accessible to everyone.
+        </p>
+
+        <h2>The Three Types of CSS Styles:</h2>
+        <ul>
+            <li><strong>Inline Styles:</strong> These are coded directly into the body of the web page using the style
+                attribute, but they only apply to that specific element.</li>
+            <li><strong>Embedded Styles:</strong> These are placed in the head section using the &lt;style&gt; tag and
+                apply to the whole document.</li>
+            <li><strong>External Styles:</strong> This is the most useful type because it saves the rules in a separate
+                file with a .css extension.</li>
+        </ul>
+    </main>
+</body>
+
+</html>
