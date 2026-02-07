@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 - HTML Page Structure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="page-title">Mastering Visual Elements in Web Design</h1>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>Understanding Image Optimization and Accessibility</h2>
+            <p>
+                This week, I learned that choosing the right image format is essential for web performance.
+                The textbook explains that photographs work best as JPEG files because they support millions
+                of colors, while logos or simple graphics with flat colors should be saved as GIF or PNG files because
+                they support transparency and lossless compression. I was surprised to learn that we should avoid using
+                spaces or punctuation in file names and always use lowercase letters to ensure the links work correctly
+                on all servers.
+            </p>
+
+            <!-- Part 2: One image inside <figure> with <figcaption>. Informative → descriptive alt text. File in images/ folder. -->
+            <figure>
+                <img src="images/desktop-and-laptop-on-desk.jpg"
+                    alt="A desktop computer and laptop on a desk" loading="lazy">
+                <figcaption>Figure 1: Desktop and laptop on a desk — an example of a JPEG photograph optimized for the web.</figcaption>
+            </figure>
+
+            <p>
+                I also discovered that the number one reason visitors leave a website is because the page takes too long
+                to download. Therefore, we must optimize images to reduce file size without losing quality. Furthermore,
+                accessibility is critical. We must always include the alt attribute in our image tags. This provides a
+                text description for visitors who use screen readers, ensuring that our website is inclusive for
+                everyone, including those with vision challenges.
+            </p>
+
+            <!-- Part 2: One regular image using <img>. Informative → descriptive alt text. File in images/ folder, lowercase + hyphens. -->
+            <img class="content-image" src="images/workspace-with-coffee.jpg"
+                alt="A workspace with a laptop displaying code and a cup of coffee" loading="lazy">
+
+            <!-- Part 2: Decorative image → alt="" so screen readers skip it. File in images/ folder, proper naming. -->
+            <img class="decorative-image" src="images/simple-flower-as-a-drawing.png" alt="" role="presentation" loading="lazy">
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Module 4 — HTML Page Structure</p>
+    </footer>
+</body>
+
+</html>

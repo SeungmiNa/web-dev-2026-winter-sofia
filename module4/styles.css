@@ -1,0 +1,90 @@
+/* Module 4 - External CSS and Visual Styling */
+
+/* --- CSS3 visual effects: design choices (Explain your design choices) --- */
+
+/* Gradient background: I wanted the page to have a bit of depth instead of one flat color. So I used a light gradient from top to bottom so it still looks clean. */
+body {
+  background: linear-gradient(180deg, #f0efe8 0%, #e8e6df 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 4rem 3rem;
+}
+
+/* Text shadow + RGBA: I used a soft white shadow (rgba so it's see-through) so the title stands out a little and is easier to read on the background. */
+#page-title {
+  margin: 0;
+  padding: 0 0 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+  border-bottom: 2px solid #737bac;
+}
+
+/* Border-radius + box shadow: Rounded corners make the section feel softer, and the box shadow (with rgba for a light shadow) makes it look like it's floating a bit above the page. */
+section {
+  border: 1px solid #364de1;
+  border-radius: 12px;
+  padding: 2.25rem 2.5rem;
+  margin: 0rem auto;
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Gradient background + RGBA: I put a gradient with semi-transparent white (rgba) on top of the background image so the image shows through but the text is still easy to read. Border-radius here too so it matches the section. */
+.hero-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.82)),
+    url("images/background-pattern-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 2.5rem 2.75rem;
+  border: 1px solid #e0ddd6;
+  border-radius: 12px;
+  color: #1a1a1a;
+}
+
+/* Border-radius + box shadow: Same idea as the section — rounded corners and a soft shadow (rgba) so the images look like little cards and don't feel too sharp. */
+.content-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* The decorative image is small and centered. I kept the max-width at 80px so it doesn't take too much space. */
+.decorative-image {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Figure has margin so it doesn't stick to the text above or below. */
+figure {
+  margin: 2rem 0;
+  padding: 0;
+}
+
+/* Figure images scale to the section width and keep their aspect ratio. */
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer is centered and uses a gray color so it's there but not too strong. */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #444242;
+}
