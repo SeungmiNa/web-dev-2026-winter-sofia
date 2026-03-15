@@ -9,6 +9,10 @@ This folder contains two versions of the same app:
 | **react-app** | React, Vite, Tailwind, React Router | Client-side (CSR)  |
 | **next-app**  | Next.js, Tailwind         | Server-side + client (SSR) |
 
+**Live demos (Vercel):**
+- **Main app (React/Vite):** [flexflow-studio.vercel.app](https://flexflow-studio.vercel.app)
+- **Next.js (SSR):** [flexflow-next.vercel.app](https://flexflow-next.vercel.app)
+
 The sections below refer mainly to **react-app** (the primary deliverable).
 
 **Submission note:** The frontend (source code, build scripts, and package manifest) is in **final-project/react-app/**.
