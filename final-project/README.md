@@ -11,6 +11,8 @@ This folder contains two versions of the same app:
 
 The sections below refer mainly to **react-app** (the primary deliverable).
 
+**Submission note:** The frontend (source code, build scripts, and package manifest) is in **final-project/react-app/**.
+
 ---
 
 ## Setup instructions
