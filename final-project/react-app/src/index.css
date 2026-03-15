@@ -1,0 +1,91 @@
+/* ============================================
+   Week 2: Layout & Responsive - Base styles
+   ============================================ */
+
+/* Box Model: border-box for predictable layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-800 antialiased;
+  background-color: #F8F7F4;
+}
+
+/* Minimal UI: subtle interactive states */
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+}
+
+/* Stagger delays for entrance animation */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Accessible color contrast: gray-800 on surface (WCAG AA), primary-600 (brand green) for focus/CTAs */
+
+/* ============================================
+   Print stylesheet (basic)
+   ============================================ */
+@media print {
+  /* Hide interactive/non-essential UI */
+  header nav,
+  header a[href="/booking"],
+  .no-print,
+  button[aria-label="Menu"] {
+    display: none !important;
+  }
+
+  /* Show header logo and title only */
+  header {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.5rem 1rem;
+  }
+
+  header a[href="/"] {
+    display: flex !important;
+  }
+
+  /* Stack main content, remove shadows and backgrounds */
+  main {
+    padding: 1rem 0;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #6b7280;
+  }
+
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+}
