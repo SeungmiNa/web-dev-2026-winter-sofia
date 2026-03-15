@@ -44,6 +44,46 @@ Then open the URL shown in the terminal (e.g. http://localhost:4173) to preview 
 
 ---
 
+## Deploying both apps
+
+You can deploy **react-app** (main site) and **next-app** (SSR version) as two separate live sites.
+
+### Option A: Vercel (recommended)
+
+1. **Push this repo to GitHub** (if you haven’t already).
+
+2. **Deploy react-app (main deliverable)**  
+   - Go to [vercel.com](https://vercel.com) → New Project → Import your repo.  
+   - Set **Root Directory** to `final-project/react-app`.  
+   - Vercel will detect Vite; leave Build Command `npm run build` and Output Directory `dist`.  
+   - Deploy. You’ll get a URL like `your-project.vercel.app`.
+
+3. **Deploy next-app (SSR / extra credit)**  
+   - Create another **New Project** and import the **same repo**.  
+   - Set **Root Directory** to `final-project/next-app`.  
+   - Vercel will detect Next.js automatically.  
+   - Deploy. You’ll get a different URL, e.g. `your-next-app.vercel.app`.
+
+4. **Optional:** In README or your submission, add the two URLs, e.g.  
+   - **Main app (React/Vite):** https://….vercel.app  
+   - **Next.js (SSR):** https://….vercel.app  
+
+### Option B: Netlify
+
+- **react-app:** New site from repo → Root directory: `final-project/react-app` → Build command: `npm run build` → Publish directory: `dist`.  
+- **next-app:** Netlify can build Next.js (Node runtime). New site → Root: `final-project/next-app` → Build: `npm run build`. Or use **Vercel for next-app** (simpler for Next.js) and Netlify only for react-app.
+
+### Summary
+
+| App        | Root directory           | Build        | Output   |
+|-----------|---------------------------|--------------|----------|
+| react-app | `final-project/react-app` | `npm run build` | `dist`   |
+| next-app  | `final-project/next-app`  | `npm run build` | (Vercel/Next handles it) |
+
+Two deployments = two projects/sites, each pointing at one of the roots above.
+
+---
+
 ## Project description
 
 **FlexFlow Studio** is a fictional fitness studio in Palo Alto serving busy professionals and students. The site lets users:
