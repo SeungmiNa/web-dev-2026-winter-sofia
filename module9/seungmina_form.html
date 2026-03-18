@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information Form</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 32px 16px;
+        background: #f6f7fb;
+        color: #111;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid #e9eaf0;
+        border-radius: 12px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+      }
+      form {
+        display: grid;
+        gap: 12px;
+      }
+      label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 6px;
+      }
+      h1 {
+        font-size: 1.35rem;
+        margin: 0 0 14px;
+        letter-spacing: 0.2px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        box-sizing: border-box;
+        border: 1px solid #d1d5db;
+        border-radius: 10px;
+        background: #fff;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      }
+      fieldset {
+        border: 1px solid #e5e7eb;
+        padding: 14px;
+        border-radius: 10px;
+      }
+      legend {
+        font-weight: 700;
+        padding: 0 8px;
+      }
+      .row {
+        display: grid;
+        gap: 6px;
+      }
+      .controls {
+        display: flex;
+        gap: 10px;
+      }
+      .choice-prompt {
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+      .choice-option {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 0;
+        font-weight: 500;
+      }
+      .choice-option input {
+        margin: 0;
+      }
+      button {
+        border-radius: 10px;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-weight: 700;
+        border: 1px solid transparent;
+      }
+      button[type="submit"] {
+        background: #2563eb;
+        color: #fff;
+      }
+      button[type="submit"]:hover {
+        background: #1d4ed8;
+      }
+      button[type="reset"] {
+        background: #fff;
+        border-color: #d1d5db;
+        color: #111;
+      }
+      button[type="reset"]:hover {
+        background: #f3f4f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Information Form</h1>
+
+      <form action="#" method="post">
+        <div class="row">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="new-password"
+            required
+          />
+        </div>
+
+        <fieldset>
+          <legend>Favorite Device</legend>
+          <div class="row">
+            <label class="choice-prompt" for="device-laptop">Choose one:</label>
+            <label class="choice-option" for="device-laptop">
+              <input
+                type="radio"
+                id="device-laptop"
+                name="favoriteDevice"
+                value="Laptop"
+                required
+              />
+              Laptop
+            </label>
+            <label class="choice-option" for="device-tablet">
+              <input
+                type="radio"
+                id="device-tablet"
+                name="favoriteDevice"
+                value="Tablet"
+                required
+              />
+              Tablet
+            </label>
+            <label class="choice-option" for="device-phone">
+              <input
+                type="radio"
+                id="device-phone"
+                name="favoriteDevice"
+                value="Phone"
+                required
+              />
+              Phone
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+          <div class="row">
+            <label class="choice-option" for="interests-music">
+              <input
+                type="checkbox"
+                id="interests-music"
+                name="interests"
+                value="Music"
+              />
+              Music
+            </label>
+            <label class="choice-option" for="interests-sports">
+              <input
+                type="checkbox"
+                id="interests-sports"
+                name="interests"
+                value="Sports"
+              />
+              Sports
+            </label>
+            <label class="choice-option" for="interests-tech">
+              <input
+                type="checkbox"
+                id="interests-tech"
+                name="interests"
+                value="Technology"
+              />
+              Technology
+            </label>
+            <label class="choice-option" for="interests-art">
+              <input
+                type="checkbox"
+                id="interests-art"
+                name="interests"
+                value="Art"
+              />
+              Art
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="row">
+          <label for="color">Favorite Color</label>
+          <select id="color" name="favoriteColor" required>
+            <option value="" selected disabled>Select a color</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Purple">Purple</option>
+            <option value="Black">Black</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="comment">Comment</label>
+          <textarea
+            id="comment"
+            name="comment"
+            rows="5"
+            placeholder="Write a short comment..."
+          ></textarea>
+        </div>
+
+        <div class="controls">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
